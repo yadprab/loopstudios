@@ -1,0 +1,53 @@
+footer {
+    background-color: var(--Black);
+    padding: 3em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    gap: 1rem;
+    max-width: 480px;
+
+    p{
+        width: 100%;
+         color: var(--White);
+         font-family: var(--font-alata);
+         text-align: center;
+    }
+}
+
+.logo--section {
+    h1 {
+        font-weight: 700;
+        color: var(--White);
+        font-family: var(--font-jos);
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+}
+
+.footer--nav {
+    @include ul;
+    flex-direction: column;
+
+    li {
+        margin-bottom: 1em;
+    }
+
+    a {
+        color: var(--White);
+        font-family: var(--font-jos);
+        text-transform: capitalize;
+        font-size: 1rem;
+    }
+}
+
+.social--media {
+    a {
+        margin: 0 1.5em;
+       
+     &:hover svg{
+         transform: scale(1.1);
+     }
+    }
+}
