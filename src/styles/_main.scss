@@ -1,14 +1,20 @@
-main {
+.home--main {
     max-width: 480px;
     padding: 0 var(--twentyF);
-     margin-bottom: var(--seven);
+    margin-bottom: var(--seven);
+}
+
+.about--main {
+    max-width: 480px;
+    margin-bottom: var(--seven);
 }
 
 .img--section {
     margin-bottom: var(--twentyF);
 }
 
-.intro--section {
+.intro--section,
+.about--section {
     margin-bottom: var(--fourE);
 
     article {
@@ -29,8 +35,137 @@ main {
             font-family: var(--font-alata);
             text-align: center;
             max-width: 40ch;
+            line-height: 1.5;
         }
     }
 }
 
 @import './creations';
+@import './team';
+
+.subscription{
+    padding: 0 var(--twentyF);
+    @include flex-2;
+    margin-bottom: var(--fourE);
+     h2 {
+         text-align: center;
+         font-family: var(--font-jos);
+         font-weight: 300;
+         text-transform: uppercase;
+         font-size: 1.5rem;
+         margin-bottom: .75em;
+         color: var(--Black);
+     }
+
+     form{
+     
+         width: 100%;
+         height: 40px;
+         position: relative;
+
+         .form--control{
+             width: 100%;
+             height: 100%;
+
+             input{
+                  width: 100%;
+                  height: 100%;
+                  appearance: none;
+                  border-radius: 50px;
+                  border: 1px solid rgba($color: #000000, $alpha: 0.6);
+                  padding: 1em;
+             }
+
+             ::placeholder{
+                 font-size: 0.6rem;
+                 text-transform: uppercase;
+                  font-family: var(--font-jos);
+                  color: var(--DarkGray);
+                  
+             }
+         }
+
+         #submit{
+             position: absolute;
+             top: 5px;
+             right: 10px;
+             @include button;
+             border-radius: 50px;
+             padding: 0.375em 2em;
+             background-color: rgba($color: #000000, $alpha: 1);
+             color: var(--White);
+             font-family: var(--font-jos);
+             font-weight: 300;
+             text-transform: uppercase;
+             font-size: 0.8rem;
+             @include box-shadow-4;
+         }
+     }
+}
+
+.banner--section{
+    height: 30vh;
+  background-image: url(../backgroundimage/mobile/TECH.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: var(--fourE);
+}
+
+.current--project{
+    padding: 0 var(--twentyF);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    place-items: center;
+     h2,h3 {
+         text-align: center;
+         font-family: var(--font-jos);
+         font-weight: 300;
+         text-transform: uppercase;
+         font-size: 1.5rem;
+         margin: .75em 0;
+         color: var(--Black);
+     }
+
+     article{
+         margin-bottom: var(--twentyF);
+         p{
+             max-width: 40ch;
+             text-align: center;
+             line-height: 1.5;
+               color: var(--DarkGray);
+               font-family: var(--font-alata);
+         }
+     }
+
+}
+
+.progress--bar{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.7);
+    position: relative;
+    overflow: hidden;
+
+    div{
+        width: 50%;
+        height: 100%;
+       background-color: #000000;
+       background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+        position: absolute;
+        transition: transform 0.4s ease-in;
+        transform-origin: 0%;
+        transform: scaleX(0);
+        animation: progress 1s ease-in forwards;
+    }
+}
+
+@keyframes progress {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}

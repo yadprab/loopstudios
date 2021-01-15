@@ -7,9 +7,9 @@ const Rest=()=> {
           <picture>
             <source
               media="(min-width:1100px )"
-              srcset="/images/desktop/image-curiosity.jpg"
+              srcSet="/images/desktop/image-curiosity.jpg"
             />
-            <img src="/images/mobile/image-curiosity.jpg" alt="The curiosity" />
+            <img src="/images/mobile/image-curiosity.jpg" alt="The curiosity" loading='lazy' />
           </picture>
           <figcaption>
             <h3>The curiosity</h3>
@@ -19,9 +19,9 @@ const Rest=()=> {
           <picture>
             <source
               media="(min-width:1100px )"
-              srcset="/images/desktop/image-fisheye.jpg"
+              srcSet="/images/desktop/image-fisheye.jpg"
             />
-            <img src="/images/mobile/image-fisheye.jpg" alt="fisheye" />
+            <img src="/images/mobile/image-fisheye.jpg" alt="fisheye"  loading='lazy'/>
           </picture>
           <figcaption>
             <h3> Make it fisheye</h3>
@@ -31,9 +31,9 @@ const Rest=()=> {
           <picture>
             <source
               media="(min-width:1100px )"
-              srcset="/images/desktop/image-from-above.jpg"
+              srcSet="/images/desktop/image-from-above.jpg"
             />
-            <img src="/images/mobile/image-from-above.jpg" alt="above" />
+            <img src="/images/mobile/image-from-above.jpg" alt="above" loading='lazy' />
           </picture>
           <figcaption>
             <h3>From up above VR</h3>
@@ -43,11 +43,12 @@ const Rest=()=> {
           <picture>
             <source
               media="(min-width:1100px )"
-              srcset="/images/desktop/image-pocket-borealis.jpg"
+              srcSet="/images/desktop/image-pocket-borealis.jpg"
             />
             <img
               src="/images/mobile/image-pocket-borealis.jpg"
               alt="  Pocket borealis"
+              loading='lazy'
             />
           </picture>
           <figcaption>

@@ -9,11 +9,11 @@ const Intro = () => {
             <picture>
               <source
                 media="(min-width:1100px )"
-                srcset="/images/desktop/image-interactive.jpg"
+                srcSet="/images/desktop/image-interactive.jpg"
               />
               <img
                 src="/images/mobile/image-interactive.jpg"
-                alt="interactive vr"
+                alt="interactive vr" loading='lazy'
               />
             </picture>
           </figure>

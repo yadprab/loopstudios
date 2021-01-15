@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Overlay } from "./Overlay";
 import { Link } from "react-router-dom";
-const Header = () => {
+const AboutHeader = () => {
   const [navOpen, setNav] = useState(false);
   return (
     <>
-      <header className="home--header">
+      <header className="about--header">
         <nav>
           <section className="logo--section">
             <Link to="/">
@@ -45,7 +45,7 @@ const Header = () => {
           </section>
         </nav>
         <section className="hero--text">
-          <h2>Immersive experiences that deliver</h2>
+          <h2>feel the realness</h2>
         </section>
 
         {navOpen && <Overlay nav={navOpen} set={setNav} />}
@@ -54,4 +54,4 @@ const Header = () => {
   );
 };
 
-export { Header };
+export { AboutHeader };

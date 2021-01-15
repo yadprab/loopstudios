@@ -1,6 +1,6 @@
-.home--header {
+.home--header, .about--header {
     max-width: 480px;
-height: 80vh;
+height: 100vh;
  background-image: url(../backgroundimage/mobile/image-hero.jpg);
  background-size: cover;
  background-position: center;
@@ -9,6 +9,20 @@ height: 80vh;
  margin-bottom: var(--seven);
  position: relative;
 
+}
+.about--header{
+     background-image: url(../backgroundimage/mobile/abouthero.jpg);
+
+     .hero--text{
+       border: 0;
+       position: relative;
+       top: 200px;
+       left: 50px;
+         h2{
+             text-align: center;
+             font-size: 2.5rem;
+         }
+     }
 }
 
 .desktop--nav{
@@ -49,7 +63,7 @@ nav{
 }
 
 .overlay{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -57,8 +71,10 @@ nav{
     background-color: var(--Black);
     padding: var(--fiveSix) var(--twentyF);
      transition: opacity 0.4s ease-in-out;
-     animation: navAni 0.4s ease-in-out forwards;
-     opacity: 0.3;
+      animation: navAni 0.4s ease-in-out forwards;
+     opacity: 0;
+     max-width: 480px;
+     z-index: 14000;
     
 
     nav{
@@ -108,6 +124,15 @@ nav{
 
   }
 }
+.animation--in {
+    animation: navAni 0.4s ease-in-out forwards;
+
+}
+.animation--out {
+    animation: navOut 0.4s ease-in-out forwards;
+
+}
+
 
 
 @keyframes navAni {
@@ -117,5 +142,14 @@ nav{
 
     100%{
         opacity: 1;
+    }
+}
+@keyframes navOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }

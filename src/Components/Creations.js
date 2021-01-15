@@ -11,11 +11,12 @@ const Creations=()=> {
               <picture>
                 <source
                   media="(min-width:1100px )"
-                  srcset="/images/desktop/image-deep-earth.jpg"
+                  srcSet="/images/desktop/image-deep-earth.jpg"
                 />
                 <img
                   src="/images/mobile/image-deep-earth.jpg"
                   alt="deep earth"
+                  loading='lazy'
                 />
               </picture>
               <figcaption>
@@ -26,11 +27,12 @@ const Creations=()=> {
               <picture>
                 <source
                   media="(min-width:1100px )"
-                  srcset="/images/desktop/image-night-arcade.jpg"
+                  srcSet="/images/desktop/image-night-arcade.jpg"
                 />
                 <img
                   src="/images/mobile/image-night-arcade.jpg"
                   alt="Night arcade"
+                  loading='lazy'
                 />
               </picture>
               <figcaption>
@@ -41,11 +43,12 @@ const Creations=()=> {
               <picture>
                 <source
                   media="(min-width:1100px )"
-                  srcset="/images/desktop/image-soccer-team.jpg"
+                  srcSet="/images/desktop/image-soccer-team.jpg"
                 />
                 <img
                   src="/images/mobile/image-soccer-team.jpg"
                   alt=" Soccer team VR"
+                  loading='lazy'
                 />
               </picture>
               <figcaption>
@@ -56,9 +59,9 @@ const Creations=()=> {
               <picture>
                 <source
                   media="(min-width:1100px )"
-                  srcset="/images/desktop/image-grid.jpg"
+                  srcSet="/images/desktop/image-grid.jpg"
                 />
-                <img src="/images/mobile/image-grid.jpg" alt="The grid" />
+                <img src="/images/mobile/image-grid.jpg" alt="The grid"  loading='lazy'/>
               </picture>
               <figcaption>
                 <h3>The grid</h3>

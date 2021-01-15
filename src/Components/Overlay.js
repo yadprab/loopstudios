@@ -1,17 +1,22 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Overlay=({nav, set})=> {
     return (
       <>
         <section className="overlay">
           <nav>
             <section className="logo--section">
-              <a href="/">
+              <Link to="/">
                 <h1>loopstudios</h1>
-              </a>
+              </Link>
 
               <section className="icon--section">
-                <button id="close--icon" onClick={()=>{set(!nav)}}>
+                <button
+                  id="close--icon"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
                   <svg
                     width="20"
                     height="20"
@@ -29,19 +34,19 @@ const Overlay=({nav, set})=> {
 
             <ul className="mobile--nav">
               <li>
-                <a href="/">home</a>
+                <Link to="/">home</Link>
               </li>
               <li>
-                <a href="/">about</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a href="/">events</a>
+                <Link to="/events">Events</Link>
               </li>
               <li>
-                <a href="/">Products</a>
+                <Link to="/products">Products</Link>
               </li>
               <li>
-                <a href="/">Support</a>
+                <Link to="/supports">supports</Link>
               </li>
             </ul>
           </nav>

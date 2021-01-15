@@ -1,9 +1,16 @@
 import './styles/styles.css';
 import {Container} from './Components/Container';
+import {About} from './Components/About'
+import {Router, BrowserRouter, Route, Switch} from 'react-router-dom'
 function App() {
   return (
     <>
-     <Container/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Container} />
+          <Route exact path="/about" component={About} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 }

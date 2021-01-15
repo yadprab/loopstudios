@@ -1,29 +1,29 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 const Footer=()=> {
     return (
       <>
         <footer>
           <section className="logo--section">
-            <a href="/">
+            <Link to="/">
               <h1>loopstudios</h1>
-            </a>
+            </Link>
           </section>
           <ul className="footer--nav">
             <li>
-              <a href="/">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="/">about</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/">events</a>
+              <Link to="/events">Events</Link>
             </li>
             <li>
-              <a href="/">Products</a>
+              <Link to="/products">Products</Link>
             </li>
             <li>
-              <a href="/">Support</a>
+              <Link to="/supports">supports</Link>
             </li>
           </ul>
           <section className="social--media">

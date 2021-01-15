@@ -4,7 +4,7 @@ import {Creations} from './Creations'
 const Main=()=> {
     return (
       <>
-        <main>
+        <main className='home--main'>
           <Intro />
           <Creations />
         </main>
