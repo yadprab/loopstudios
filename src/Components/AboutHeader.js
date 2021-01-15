@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Overlay } from "./Overlay";
 import { Link } from "react-router-dom";
 const AboutHeader = () => {
-  const [navOpen, setNav] = useState(false);
+  const [navOpenAbt, setNavAbt] = useState(false);
   return (
     <>
       <header className="about--header">
@@ -33,7 +33,7 @@ const AboutHeader = () => {
             <button
               id="hamburger--icon"
               onClick={() => {
-                setNav(!navOpen);
+                setNavAbt(!navOpenAbt);
               }}
             >
               <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@ const AboutHeader = () => {
           <h2>feel the realness</h2>
         </section>
 
-        {navOpen && <Overlay nav={navOpen} set={setNav} />}
+        {navOpenAbt && <Overlay nav={navOpenAbt} set={setNavAbt} />}
       </header>
     </>
   );

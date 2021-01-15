@@ -8,7 +8,6 @@ const About=()=> {
       <>
         <AboutHeader />
         <AboutMain />
-        
         <Footer />
       </>
     );

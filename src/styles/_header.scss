@@ -12,7 +12,10 @@ height: 100vh;
 }
 .about--header{
      background-image: url(../backgroundimage/mobile/abouthero.jpg);
-
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+ max-width: 480px;
      .hero--text{
        border: 0;
        position: relative;
@@ -75,6 +78,7 @@ nav{
      opacity: 0;
      max-width: 480px;
      z-index: 14000;
+ 
     
 
     nav{
