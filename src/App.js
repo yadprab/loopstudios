@@ -1,7 +1,7 @@
 import './styles/styles.css';
 import {Container} from './Components/Container';
 import {About} from './Components/About'
-import {Router, BrowserRouter, Route, Switch} from 'react-router-dom'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
 function App() {
   return (
     <>
