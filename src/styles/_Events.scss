@@ -1,0 +1,80 @@
+.events--info{
+background-image:url(../backgroundimage/bg-stars.svg), url(../backgroundimage/pattern-hills.svg) ;
+background-repeat: repeat, no-repeat;
+background-position: center,  right bottom -50px;
+
+ h2{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+        color: var(--White);
+        font-weight: 500;
+    }
+
+    article{
+        max-width: 30ch;
+
+        p{
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 0.75em;
+            color: var(--White);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+              font-weight: 700;
+        }
+    }
+
+    #venue{
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 4px;
+        font-weight: 700;
+            color: var(--Softred);
+    }
+
+   .count--down{
+       display: grid;
+       grid-template-columns: repeat(4, 50px);
+       margin: var(--twentyF) 0;
+       gap: 2rem;
+   }
+   .count{
+    
+       div{
+           background-color: var(--Darkdesaturatedblue);
+           text-align: center;
+           padding: 0.5em;
+           border-radius: 5px;
+           position: relative;
+           height: 30px;
+
+           p{
+               position: absolute;
+               @include flex-1;
+               width: 100%;
+               right: 10px;
+               transform: translateX(10px);
+          
+               font-weight: 700;
+               color: var(--Softred);
+               text-align: center;
+               font-size: 1.5rem;
+               z-index: 13000;
+           }
+
+         
+          
+           }
+       }
+
+     .type {
+         text-transform: uppercase;
+         margin-top: 0.75em;
+         font-size: 0.7rem;
+         letter-spacing: 4px;
+         font-weight: 700;
+         color: var(--White);
+         text-align: center;
+     }  
+}

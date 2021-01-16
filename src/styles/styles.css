@@ -7,6 +7,7 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -491,8 +492,14 @@ table {
   --Black: hsl(0, 0%, 0%);
   --DarkGray: hsl(0, 0%, 55%);
   --VeryDarkGray: hsl(0, 0%, 41%);
+  --Grayishblue: hsl(237, 18%, 59%);
+  --Softred: hsl(345, 95%, 68%);
+  --Darkdesaturatedblue: hsl(236, 21%, 26%);
+  --Verydarkblue: hsl(235, 16%, 14%);
+  --Verydark: hsl(234, 17%, 12%);
   --font-alata:'Alata',sans-serif;
   --font-jos: 'Josefin Sans',sans-serif;
+  --font-red:'Red Hat Text', sans-serif;
   --baseHeight:20px;
   --OneTwo:8em;
   --NineSix: 6.4em;
@@ -555,7 +562,9 @@ body {
   padding: 0;
 }
 
-.home--header, .about--header {
+.home--header,
+.about--header,
+.events--header {
   max-width: 480px;
   height: 100vh;
   background-image: url(../backgroundimage/mobile/image-hero.jpg);
@@ -569,22 +578,39 @@ body {
 
 .about--header {
   background-image: url(../backgroundimage/mobile/abouthero.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 480px;
 }
 
 .about--header .hero--text {
-  border: 0;
+  border: 2px solid var(--White);
   position: relative;
-  top: 200px;
-  left: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .about--header .hero--text h2 {
   text-align: center;
   font-size: 2.5rem;
+}
+
+.events--header {
+  background-image: url(../backgroundimage/mobile/events.jpg);
+  margin-bottom: 0;
+}
+
+.events--header .hero--text {
+  text-align: center;
+  margin-bottom: var(--twentyF);
+}
+
+.events--header .hero--text h2 {
+  font-size: 1.8rem;
+}
+
+.events--header p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--font-jos);
+  color: var(--White);
+  text-transform: uppercase;
 }
 
 .desktop--nav {
@@ -630,7 +656,7 @@ nav #hamburger--icon {
 
 .hero--text h2 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   font-family: var(--font-jos);
   color: var(--White);
@@ -799,6 +825,31 @@ nav #hamburger--icon {
 .about--main {
   max-width: 480px;
   margin-bottom: var(--seven);
+}
+
+.event--main {
+  max-width: 480px;
+  background-color: var(--Verydarkblue);
+  padding: var(--fiveSix) 0;
+  font-family: var(--font-red);
+}
+
+.events--info {
+  padding: var(--twentyF);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: var(--fourE);
 }
 
 .img--section {
@@ -1057,6 +1108,92 @@ nav #hamburger--icon {
   }
 }
 
+.events--info {
+  background-image: url(../backgroundimage/bg-stars.svg), url(../backgroundimage/pattern-hills.svg);
+  background-repeat: repeat, no-repeat;
+  background-position: center,  right bottom -50px;
+}
+
+.events--info h2 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  color: var(--White);
+  font-weight: 500;
+}
+
+.events--info article {
+  max-width: 30ch;
+}
+
+.events--info article p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.75em;
+  color: var(--White);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+.events--info #venue {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: var(--Softred);
+}
+
+.events--info .count--down {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+  margin: var(--twentyF) 0;
+  gap: 2rem;
+}
+
+.events--info .count div {
+  background-color: var(--Darkdesaturatedblue);
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 5px;
+  position: relative;
+  height: 30px;
+}
+
+.events--info .count div p {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  right: 10px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  font-weight: 700;
+  color: var(--Softred);
+  text-align: center;
+  font-size: 1.5rem;
+  z-index: 13000;
+}
+
+.events--info .type {
+  text-transform: uppercase;
+  margin-top: 0.75em;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: var(--White);
+  text-align: center;
+}
+
 .subscription {
   padding: 0 var(--twentyF);
   display: -webkit-box;
@@ -1163,6 +1300,114 @@ nav #hamburger--icon {
           box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
 }
 
+.invitation {
+  width: 100%;
+  margin-top: var(--twentyF);
+}
+
+.invitation h2 {
+  display: none;
+}
+
+.invitation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.invitation form .form--control {
+  width: 100%;
+  height: 100%;
+}
+
+.invitation form .form--control input {
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50px;
+  border: none;
+  padding: 1em;
+}
+
+.invitation form .form--control ::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-red);
+  color: var(--DarkGray);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.invitation form .form--control :-ms-input-placeholder {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-red);
+  color: var(--DarkGray);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.invitation form .form--control ::-ms-input-placeholder {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-red);
+  color: var(--DarkGray);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.invitation form .form--control ::placeholder {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--font-red);
+  color: var(--DarkGray);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.invitation form #submit {
+  margin-top: 1.5em;
+  display: inline-block;
+  line-height: 1.5;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.375em 0.75em;
+  font-size: 0.89rem;
+  text-transform: capitalize;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  padding: 1em 2em;
+  line-height: 1.5;
+  vertical-align: middle;
+  background-color: var(--Darkdesaturatedblue);
+  color: var(--White);
+  font-family: var(--font-jos);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
+          box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
+}
+
 .banner--section {
   height: 30vh;
   background-image: url(../backgroundimage/mobile/TECH.jpg);
@@ -1250,6 +1495,127 @@ nav #hamburger--icon {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
+}
+
+.event--details {
+  padding: var(--fourE) var(--twentyF);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.event--org {
+  margin-bottom: var(--fourE);
+}
+
+.event--org figure {
+  border-radius: 5px;
+}
+
+.event--org figure img {
+  border-radius: 5px;
+}
+
+.event--org figure figcaption {
+  margin-top: var(--twelve);
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.event--org figure figcaption span {
+  font-weight: 400;
+  color: var(--Softred);
+}
+
+.event--org p {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--White);
+  letter-spacing: 4px;
+}
+
+.events--cards ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (230px)[1];
+      grid-template-columns: repeat(1, 230px);
+  grid-auto-rows: 250px;
+  gap: 1rem;
+}
+
+.events--cards li figure {
+  border-radius: 5px;
+  position: relative;
+}
+
+.events--cards li figure img {
+  border-radius: 5px;
+}
+
+.events--cards li figure figCaption {
+  position: absolute;
+  bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: var(--font-red);
+}
+
+.events--cards li figure figCaption h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1a1b23;
+}
+
+.events--cards li figure figCaption p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1a1b23;
+  text-align: center;
+}
+
+.events--cards li:nth-of-type(2) figure figcaption h3 {
+  color: var(--White);
+}
+
+.events--cards li:nth-of-type(2) figure figcaption p {
+  color: var(--White);
+}
+
+.events--cards li:nth-of-type(3) figure figcaption {
+  top: 30px;
+  bottom: unset;
+  left: 40px;
+}
+
+.event--banner {
+  background-image: url(../backgroundimage/mobile/banner2.jpg);
 }
 
 footer {

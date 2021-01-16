@@ -9,7 +9,20 @@
     margin-bottom: var(--seven);
     
 }
-
+.event--main{
+      max-width: 480px;
+     
+      background-color: var(--Verydarkblue);
+      padding: var(--fiveSix) 0;
+      font-family: var(--font-red);
+     
+}
+.events--info{
+    padding: var(--twentyF);
+    @include flex-2;
+    margin-bottom: var(--fourE);
+   
+}
 .img--section {
     margin-bottom: var(--twentyF);
 }
@@ -43,6 +56,7 @@
 
 @import './creations';
 @import './team';
+@import './Events';
 
 .subscription{
     padding: 0 var(--twentyF);
@@ -103,6 +117,63 @@
          }
      }
 }
+.invitation{
+   width: 100%;
+  
+    margin-top: var(--twentyF);
+    h2{
+        display: none;
+    }
+       form {
+           @include flex-2;
+           width: 100%;
+           height: 40px;
+           position: relative;
+
+           .form--control {
+               width: 100%;
+               height: 100%;
+
+               input {
+                   width: 100%;
+                   height: 100%;
+                   appearance: none;
+                   border-radius: 50px;
+                   border: none;
+                   padding: 1em;
+               }
+
+               ::placeholder {
+                   font-size: 0.8rem;
+                   text-transform: uppercase;
+                   font-family: var(--font-red);
+                   color: var(--DarkGray);
+                   text-align: center;
+                   letter-spacing: 2px;
+
+               }
+           }
+
+           #submit {
+           
+               margin-top: 1.5em;
+               @include button;
+             
+               padding: 1em 2em;
+               line-height: 1.5;
+               vertical-align: middle;
+               background-color: var(--Darkdesaturatedblue);
+               color: var(--White);
+               font-family: var(--font-jos);
+               font-weight: 500;
+               text-transform: uppercase;
+               font-size: 0.8rem;
+               letter-spacing: 4px;
+               @include box-shadow-4;
+           }
+       }
+  
+}
 
 .banner--section{
     height: 30vh;
@@ -162,6 +233,8 @@
     }
 }
 
+
+
 @keyframes progress {
     0%{
         transform: scaleX(0);
@@ -169,4 +242,118 @@
     100%{
         transform: scaleX(1);
     }
+}
+
+.event--details{
+    padding: var(--fourE) var(--twentyF);
+    @include flex-2;
+}
+.event--org{
+    margin-bottom: var(--fourE);
+    figure{
+        border-radius: 5px;
+       
+
+        img{
+             border-radius: 5px;
+        }
+
+        figcaption{
+              margin-top: var(--twelve);
+            font-size: 2rem;
+            text-transform: capitalize;
+            text-align: center;
+            font-weight: 700;
+            color: var(--White);
+
+            span{
+                font-weight: 400;
+                color: var(--Softred);
+            }
+        }
+    }
+
+    p{
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--White);
+        letter-spacing: 4px;
+        
+    }
+}
+
+.events--cards{
+    ul{
+        display: grid;
+        grid-template-columns: repeat(1, 230px);
+        grid-auto-rows: 250px;
+        gap: 1rem;
+    }
+
+    li{
+        figure{
+            border-radius: 5px;
+            position: relative;
+
+            img{
+                border-radius: 5px;
+           
+            }
+
+            figCaption{
+                position: absolute;
+                bottom: 15px;
+                @include flex-2;
+                width: 100%;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                 font-family: var(--font-red);
+             
+
+                 h3{
+                     font-weight: 500;
+                     font-size: 1rem;
+                     color: hsl(236, 14, 12);
+                 }
+                 p{
+                     font-size: 0.8rem;
+                     font-weight: 500;
+                     color: hsl(236, 14, 12);
+                     text-align: center;
+                 }
+            }
+        }
+
+        &:nth-of-type(2){
+            figure{
+                figcaption {
+                   
+                    h3{
+                        color: var(--White);
+                    }
+                    p{
+                       color: var(--White);
+                    }
+                }
+            }
+        }
+          &:nth-of-type(3) {
+              figure {
+                  figcaption {
+                    top: 30px;
+                    bottom: unset;
+                    left: 40px;
+                     
+
+                  }
+              }
+          }
+    }
+}
+.event--banner{
+    
+
+  background-image: url(../backgroundimage/mobile/banner2.jpg);
+  
+
 }

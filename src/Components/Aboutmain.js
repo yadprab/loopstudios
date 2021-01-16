@@ -9,7 +9,7 @@ const AboutMain = () => {
       <main className="about--main">
         <AboutIntro />
         <Teams />
-        <Form />
+        <Form name={`subscription`} title={`be a part of the future`} val={`subscribe`}/>
         <section className="banner--section"></section>
         <Project />
       </main>
