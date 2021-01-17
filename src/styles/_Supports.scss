@@ -1,6 +1,7 @@
 .supports--container{
    
     padding: 56px 24px;
+   min-height: 100vh;
 
     background: linear-gradient(180deg, #1E1F29 0%, #7EE8FA 100%);
     @include flex-2;
@@ -22,29 +23,32 @@
     margin-top: 4em;
     border-radius: 5px;
     @include box-shadow-4;
-}
-article{
-    background-color: var(--Black);
-    padding: 1em;
-    text-align: center;
-    color: var(--White);
-    font-family: var(--font-red);
-    margin-bottom: 1.5em;
 
-    h2{
-        text-transform: uppercase;
-        font-size: 1.1rem;
-        font-weight: 700;
-        letter-spacing: 4px;
-    }
-    p{
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 400;
-        margin-top: 0.75em;
-        letter-spacing: 2px;
-    }
+    article {
+        background-color: var(--Black);
+        padding: 1em;
+        text-align: center;
+        color: var(--White);
+        font-family: var(--font-red);
+        margin-bottom: 1.5em;
 
+        h2 {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-top: 0.75em;
+            letter-spacing: 2px;
+        }
+
+
+    }
 
 }
 

@@ -1609,6 +1609,7 @@ nav #hamburger--icon {
 
 .supports--container {
   padding: 56px 24px;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#1E1F29), to(#7EE8FA));
   background: linear-gradient(180deg, #1E1F29 0%, #7EE8FA 100%);
   display: -webkit-box;
@@ -1644,7 +1645,7 @@ nav #hamburger--icon {
           box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
 }
 
-article {
+.accordion--container article {
   background-color: var(--Black);
   padding: 1em;
   text-align: center;
@@ -1653,14 +1654,14 @@ article {
   margin-bottom: 1.5em;
 }
 
-article h2 {
+.accordion--container article h2 {
   text-transform: uppercase;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 4px;
 }
 
-article p {
+.accordion--container article p {
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 400;
