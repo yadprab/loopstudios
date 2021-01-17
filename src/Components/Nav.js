@@ -14,19 +14,54 @@ const Nav=()=> {
           </section>
           <ul className="desktop--nav">
             <li>
-              <Link to="/">home</Link>
+              <Link
+                to="/"
+                onClick={() => {
+                  setNav(!navOpen);
+                }}
+              >
+                home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link
+                to="/about"
+                onClick={() => {
+                  setNav(!navOpen);
+                }}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/events">Events</Link>
+              <Link
+                to="/events"
+                onClick={() => {
+                  setNav(!navOpen);
+                }}
+              >
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="/products">Products</Link>
+              <Link
+                to="/products"
+                onClick={() => {
+                  setNav(!navOpen);
+                }}
+              >
+                Products
+              </Link>
             </li>
             <li>
-              <Link to="/supports">supports</Link>
+              <Link
+                to="/supports"
+                onClick={() => {
+                  setNav(!navOpen);
+                }}
+              >
+                supports
+              </Link>
             </li>
           </ul>
           <section className="icon--section">
