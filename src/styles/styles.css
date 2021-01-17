@@ -551,6 +551,10 @@ body {
   overflow-x: hidden;
 }
 
+#root {
+  width: 100%;
+}
+
 .home--header,
 .about--header,
 .events--header {
