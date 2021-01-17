@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Nav} from './Nav'
 import {Accordion} from './Acoordion'
 const Supports=()=> {
