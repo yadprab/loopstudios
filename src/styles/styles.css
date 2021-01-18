@@ -556,11 +556,6 @@ body {
   margin: 0 !important;
 }
 
-#root {
-  max-width: 480px;
-  margin: auto;
-}
-
 .main--container {
   min-height: 100%;
 }
@@ -735,6 +730,7 @@ nav #hamburger--icon {
   transition: opacity 0.4s ease-in-out;
   -webkit-animation: navAni 0.4s ease-in-out forwards;
           animation: navAni 0.4s ease-in-out forwards;
+  display: none;
   max-width: 480px;
   z-index: 14000;
 }
