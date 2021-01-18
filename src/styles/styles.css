@@ -730,7 +730,6 @@ nav #hamburger--icon {
   transition: opacity 0.4s ease-in-out;
   -webkit-animation: navAni 0.4s ease-in-out forwards;
           animation: navAni 0.4s ease-in-out forwards;
-  display: none;
   max-width: 480px;
   z-index: 14000;
 }
