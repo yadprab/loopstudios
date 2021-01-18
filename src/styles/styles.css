@@ -570,7 +570,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding: var(--fiveSix) var(--twentyF);
-  margin-bottom: var(--seven);
   position: relative;
 }
 
