@@ -146,7 +146,7 @@ nav{
     padding: var(--fiveSix) var(--twentyF);
      transition: opacity 0.4s ease-in-out;
       animation: navAni 0.4s ease-in-out forwards;
-     opacity: 0;
+    
      max-width: 480px;
      z-index: 14000;
 
@@ -214,7 +214,7 @@ nav{
 
 @keyframes navAni {
     0%{
-        opacity: 0.3;
+        opacity: 0;
     }
 
     100%{
