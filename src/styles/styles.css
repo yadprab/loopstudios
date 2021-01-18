@@ -556,6 +556,11 @@ body {
   margin: 0 !important;
 }
 
+#root {
+  max-width: 480px;
+  margin: auto;
+}
+
 .main--container {
   min-height: 100%;
 }
@@ -570,7 +575,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding: var(--fiveSix) var(--twentyF);
+  margin-bottom: 78px;
   position: relative;
+  overflow: hidden;
 }
 
 .about--header {
