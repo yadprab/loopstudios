@@ -515,7 +515,7 @@ table {
 html {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  overflow-x: hidden;
+  min-width: 100%;
 }
 
 * {
@@ -534,6 +534,7 @@ html {
 img {
   max-width: 100%;
   display: block;
+  overflow: hidden;
 }
 
 a {
@@ -547,17 +548,17 @@ svg {
 body {
   font-size: 15px;
   line-height: 1.5;
-  font-family: var(--font);
-  overflow-x: hidden;
+  min-height: 100%;
+  min-width: 100%;
 }
 
-#root {
-  width: 100%;
+.main--container {
+  min-height: 100%;
 }
 
 .home--header,
 .about--header,
-.events--header {
+.events--header, .products--header {
   max-width: 480px;
   height: 100vh;
   background-image: url(../backgroundimage/mobile/image-hero.jpg);
@@ -604,6 +605,63 @@ body {
   font-family: var(--font-jos);
   color: var(--White);
   text-transform: uppercase;
+}
+
+.products--header {
+  background-image: url(../backgroundimage/mobile/Products.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.products--header nav {
+  margin-bottom: auto;
+}
+
+.products--header nav h1 {
+  color: var(--Verydarkblue);
+}
+
+.products--header nav #hamburger--icon svg g {
+  fill: var(--Verydarkblue);
+}
+
+.products--header .overlay nav h1 {
+  color: var(--White);
+}
+
+.products--header .hero--text {
+  margin-top: 0;
+  border: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  font-family: var(--font-red);
+  text-align: center;
+}
+
+.products--header .hero--text h2 {
+  color: var(--Verydarkblue);
+  font-family: var(--font-red);
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.products--header .hero--text p {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--Verydarkblue);
 }
 
 .desktop--nav {
@@ -843,6 +901,180 @@ nav #hamburger--icon {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: var(--fourE);
+}
+
+.products--main {
+  max-width: 480px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#E4E4E4), to(#FFFFFF));
+  background-image: linear-gradient(180deg, #E4E4E4 0%, #FFFFFF 100%);
+  padding: 78px 0;
+}
+
+.products--main .intro--section {
+  font-family: var(--font-red);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.products--main .intro--section article {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.products--main .intro--section figure {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.products--main .intro--section h3 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  max-width: 40ch;
+  color: var(--Verydarkblue);
+}
+
+.products--main .intro--section p {
+  font-family: var(--font-red);
+  color: var(--Verydarkblue);
+  margin-top: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  max-width: 50ch;
+}
+
+.slider--section h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  max-width: 40ch;
+  color: var(--Verydarkblue);
+  font-family: var(--font-red);
+  margin-bottom: 24px;
+}
+
+.slider {
+  margin-bottom: 48px;
+}
+
+.slider figure img {
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+
+.ani figure img {
+  -webkit-animation: tr 0.4s ease forwards;
+          animation: tr 0.4s ease forwards;
+}
+
+.slideButton--section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slideButton--section button {
+  margin: 1em 0;
+  display: inline-block;
+  line-height: 1.5;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.375em 0.75em;
+  font-size: 0.89rem;
+  text-transform: capitalize;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  padding: 0.5em 2em;
+  background-color: unset;
+  border: 2px solid var(--Verydarkblue);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: var(--font-red);
+  font-weight: 500;
+  min-width: 220px;
+}
+
+.foot--section article {
+  padding: 24px 12px;
+}
+
+.foot--section article h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  max-width: 40ch;
+  color: var(--Verydarkblue);
+  font-family: var(--font-red);
+  margin-bottom: 24px;
+}
+
+.foot--section article p {
+  font-family: var(--font-red);
+  color: var(--Verydarkblue);
+  margin-top: 24px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  max-width: 50ch;
+  text-align: center;
+}
+
+.foot--section h3 {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--Verydarkblue);
+  font-family: var(--font-red);
+}
+
+@-webkit-keyframes tr {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tr {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ht {
+  background-color: var(--Black);
+  color: var(--White);
 }
 
 .img--section {
@@ -1420,7 +1652,8 @@ nav #hamburger--icon {
   place-items: center;
 }
 
-.current--project h2, .current--project h3 {
+.current--project h2,
+.current--project h3 {
   text-align: center;
   font-family: var(--font-jos);
   font-weight: 300;
