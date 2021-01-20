@@ -1,0 +1,484 @@
+@media screen and (min-width:481px) {
+
+    .home--header,
+    .about--header,
+    .events--header{
+        max-width: 768px;
+    }
+
+    .hero--text {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .home--header {
+        background-image: url(../backgroundimage/desktop/image-hero.jpg);
+    }
+
+    .about--header {
+
+
+        background-image: url(../backgroundimage/desktop/ipadAbt.jpg);
+    }
+
+    .events--header {
+        background-image: url(../backgroundimage/desktop/eventsIpad.jpg);
+        .hero--text{
+            text-align: left;
+            h2{
+                font-size: 3rem;
+            }
+        }
+
+        p{
+            text-align: left;
+            padding-left: 24px;
+            font-size: 2rem;
+        }
+    }
+    .events--info{
+        h2{
+            font-size: 2.5rem;
+        }
+         #venue{
+             font-size: 1.7rem;
+         }
+         article{
+             p{
+                 font-size: 1.2rem;
+             }
+         }
+
+        .count--down{
+            grid-template-columns: repeat(4, 100px);
+
+            .count{
+                div{
+                    height: 50px;
+                     p {
+                         font-size: 2.5rem;
+                         top: 20px;
+                     }
+                }
+               .type{
+                   font-size: 1rem;
+               }
+            }
+        }
+
+
+    }
+
+    .overlay {
+        max-width: 768px;
+    }
+
+    .logo--section {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+
+
+    ///main--section
+    .home--main,.about--main,.event--main{
+        max-width: 768px;
+
+        .intro--section {
+            article {
+                p {
+                    max-width: 50ch;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+ 
+    .about--section{
+        article{
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+  
+    .project--section{
+          @include flex-2;
+        article{
+          
+            p{
+                max-width: 50ch;
+                text-align: center;
+            }
+        }
+    }
+
+
+
+
+
+
+    footer {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width:769px) {
+
+    .home--header,
+    .about--header,
+    .events--header,
+    .products--header {
+        max-width: 900px;
+    }
+
+
+
+    .overlay {
+        max-width: 900px;
+    }
+
+
+
+
+
+    ///main--section
+    .home--main,.about--main,.event--main {
+        max-width: 900px;
+
+    }
+ .current--project {
+     grid-template-columns: repeat(5, 1fr);
+     place-content: center;
+
+     figure {
+         grid-row: 1/2;
+         grid-column: 1/ span 3;
+     }
+
+     .project--section {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         grid-row: 1/2;
+         grid-column: 3/-1;
+         background-color: var(--White);
+         align-self: end;
+     }
+
+     article {
+         text-align: left;
+
+         p {
+             max-width: 50ch;
+             text-align: left;
+         }
+
+     }
+ }
+
+   .cards--section {
+       ul {
+           grid-template-columns: repeat(2, 300px);
+       }
+   }
+
+
+
+
+
+
+    footer {
+        max-width: 900px;
+    }
+}
+
+@media screen and (min-width:901px) {
+
+    .home--header,
+    .about--header,
+    .events--header,
+    .products--header {
+        max-width: 1024px;
+    }
+
+
+
+    .overlay {
+        max-width: 1024px;
+    }
+
+
+
+
+
+    ///main--section
+    .home--main,
+    .about--main,
+    .event--main {
+        max-width: 1024px;
+
+
+    }
+
+
+
+    .our--creations {
+        place-content: center;
+
+
+
+
+    }
+
+
+    .creations {
+
+        place-content: center;
+        grid-template-columns: repeat(2, 256px);
+    }
+
+
+
+
+
+    footer {
+        max-width: 1024px;
+    }
+}
+
+@media screen and (min-width:1025px) {
+
+    .home--header,
+    .about--header,
+    .events--header,
+    .products--header {
+        max-width: 1100px;
+    }
+
+
+
+    .overlay {
+        max-width: 1100px;
+    }
+
+
+
+
+
+    ///main--section
+    .home--main,
+    .about--main,
+    .event--main {
+        max-width: 1100px;
+
+
+    }
+
+
+
+
+
+
+
+
+
+    footer {
+        max-width: 1100px;
+    }
+}
+
+@media screen and (min-width:1101px) {
+
+    .home--header,
+    .about--header,
+    .events--header
+     {
+        max-width: 1440px;
+        padding: 120px 48px;
+        height: 120vh;
+    }
+
+    .icon--section {
+        display: none;
+    }
+    .about--header{
+        .hero--text{
+            max-width: 500px;
+            h2{
+                text-align: left;
+            }
+        }
+    }
+
+    .desktop--nav {
+        @include ul;
+
+        a {
+            color: var(--White);
+            font-family: var(--font-jos);
+            text-transform: capitalize;
+            font-size: 1rem;
+            position: relative;
+
+            &::after {
+                @include nav-links-hover;
+                bottom: -4px;
+                border-bottom: 1px solid var(--White);
+
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+
+            }
+
+        }
+    }
+
+    .overlay {
+        max-width: 1440px;
+    }
+
+
+
+
+
+    ///main--section
+    .home--main,.about--main,.event--main{
+        max-width: 1440px;
+
+        .intro--section {
+            grid-template-columns: repeat(5, 1fr);
+            margin-bottom: 96px;
+
+            .img--section {
+                grid-row: 1/2;
+                grid-column: 1/ span 3;
+            }
+
+            article {
+                grid-row: 1/2;
+                grid-column: 3/-1;
+                background-color: var(--White);
+                align-self: flex-end;
+                height: 400px;
+            }
+        }
+
+
+    }
+    
+    .cards--section{
+        ul{
+            grid-template-columns: repeat(3, 300px);
+        }
+    }
+
+
+    .our--creations {
+        place-content: center;
+
+
+
+
+    }
+
+
+    .creations {
+
+        place-content: center;
+        grid-template-columns: repeat(4, 256px);
+    }
+
+  
+
+
+
+    footer {
+        max-width: 1440px;
+        grid-template-columns: repeat(2, 1fr);
+
+        .logo--section,
+        p {
+            justify-self: start;
+            align-self: center;
+        }
+
+        .social--media {
+            order: 2;
+            justify-self: end;
+
+            a {
+                position: relative;
+
+                &::after {
+                    @include nav-links-hover;
+                    bottom: -4px;
+                    border-bottom: 1px solid var(--White);
+
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+
+                }
+
+
+            }
+        }
+
+        p {
+            width: initial;
+        }
+
+        .footer--nav {
+            flex-direction: row;
+            justify-self: end;
+
+            a {
+                position: relative;
+
+                &::after {
+                    @include nav-links-hover;
+                    bottom: -4px;
+                    border-bottom: 1px solid var(--White);
+
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+
+                }
+
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1441px) {
+
+    .home--header,
+    .about--header,
+    .events--header,
+    .products--header {
+        max-width: 100%;
+    }
+
+    ///main--section
+    .home--main,
+    .about--main,
+    .event--main {
+        max-width: 100%;
+       
+    }
+
+    footer {
+        max-width: 100%;
+    }
+
+
+}

@@ -2,8 +2,14 @@
 
 .home--main {
     max-width: 480px;
-    padding: 0 var(--twentyF);
+    padding:  var(--twentyF);
     margin-bottom: var(--seven);
+    .intro--section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 10px;
+        place-content: center;
+    }
 }
 
 .about--main {
@@ -28,138 +34,10 @@
 
 }
 
-.products--main {
-    max-width: 480px;
-    background-image: linear-gradient(180deg, #E4E4E4 0%, #FFFFFF 100%);
-     padding:78px 0;
-    .intro--section{
-        font-family: var(--font-red);
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-
-        article{
-            order: 1;
-        }
-        figure{
-            order: 2;
-        }
-        h3{
-            text-transform: uppercase;
-            font-size: 1.3rem;
-            text-align: center;
-            font-weight: 700;
-            letter-spacing: 4px;
-            max-width: 40ch;
-            color: var(--Verydarkblue);
-        }
-        p{
-           font-family: var(--font-red);
-           color: var(--Verydarkblue);
-           margin-top: 24px;
-           font-weight: 500;
-           letter-spacing: 2px;
-           font-size: 0.8rem;
-           max-width: 50ch;
-
-        }
-    }
-    
-}
-.slider--section{
-          h2 {
-              text-transform: uppercase;
-              font-size: 1.1rem;
-              text-align: center;
-              font-weight: 700;
-              letter-spacing: 4px;
-              max-width: 40ch;
-              color: var(--Verydarkblue);
-               font-family: var(--font-red);
-               margin-bottom: 24px;
-             
-          }
-        
-    
-    }
-    .slider {
-        margin-bottom: 48px;
-
-        figure {
-            img {
-                
-                transition: opacity 0.4s ease-in;
-               
-              
-            }
-        }
 
 
-    }
 
-    .ani{
-        figure{
-            img{
-                 animation: tr 0.4s ease forwards;
-            }
-        }
-    }
 
-.slideButton--section {
-    @include flex-2;
-
-  button {
-        margin: 1em 0;
-        @include button;
-        padding: 0.5em 2em;
-        background-color: unset;
-        border: 2px solid var(--Verydarkblue);
-        border-radius: 50px;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-family: var(--font-red);
-        font-weight: 500;
-        min-width: 220px;
-    }
-}
-.foot--section{
-  
-    article{
-          padding: 24px 12px;
-            h2 {
-                text-transform: uppercase;
-                font-size: 1.1rem;
-                text-align: center;
-                font-weight: 700;
-                letter-spacing: 4px;
-                max-width: 40ch;
-                color: var(--Verydarkblue);
-                font-family: var(--font-red);
-                margin-bottom: 24px;
-
-            }
-            p {
-                font-family: var(--font-red);
-                color: var(--Verydarkblue);
-                margin-top: 24px;
-                font-weight: 500;
-                letter-spacing: 2px;
-                font-size: 0.8rem;
-                max-width: 50ch;
-                text-align: center;
-
-            }
-           
-    }
-   h3 {
-       text-align: center;
-       font-weight: 700;
-       text-transform: uppercase;
-       letter-spacing: 3px;
-        color: var(--Verydarkblue);
-        font-family: var(--font-red);
-   }
-}
 @keyframes tr {
     0% {
         opacity: 0.5;
@@ -176,6 +54,10 @@
 }
 .img--section {
     margin-bottom: var(--twentyF);
+
+    img{
+        width: 100%;
+    }
 }
 
 .intro--section,
@@ -184,11 +66,12 @@
 
     article {
         padding: var(--twentyF);
+        @include flex-2;
 
         h2 {
             text-align: center;
             font-family: var(--font-jos);
-            font-weight: 300;
+            font-weight: 500;
             text-transform: uppercase;
             font-size: 2rem;
             margin-bottom: .75em;
@@ -217,7 +100,7 @@
     h2 {
         text-align: center;
         font-family: var(--font-jos);
-        font-weight: 300;
+        font-weight: 500;
         text-transform: uppercase;
         font-size: 1.5rem;
         margin-bottom: .75em;
@@ -227,6 +110,7 @@
     form {
 
         width: 100%;
+        max-width: 500px;
         height: 40px;
         position: relative;
 
@@ -272,8 +156,8 @@
 
 .invitation {
     width: 100%;
-
-    margin-top: var(--twentyF);
+    @include flex-1;
+    margin-top: var(--fourE);
 
     h2 {
         display: none;
@@ -283,6 +167,7 @@
         @include flex-2;
         width: 100%;
         height: 40px;
+        max-width: 500px;
         position: relative;
 
         .form--control {
@@ -342,24 +227,36 @@
 .current--project {
     padding: 0 var(--twentyF);
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, minmax((1fr, 480px)));
     gap: 1rem;
-    place-items: center;
+    place-content: center;
+      
+
+    .project--section{
+        padding: 24px;
+
+    }
+    figure{
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     h2,
     h3 {
         text-align: center;
         font-family: var(--font-jos);
-        font-weight: 300;
+        font-weight: 500;
         text-transform: uppercase;
         font-size: 1.5rem;
-        margin: .75em 0;
+         margin-bottom: 12px;
         color: var(--Black);
     }
 
     article {
         margin-bottom: var(--twentyF);
-
+     
         p {
             max-width: 40ch;
             text-align: center;
@@ -377,6 +274,7 @@
     border: 1px solid rgba($color: #000000, $alpha: 0.7);
     position: relative;
     overflow: hidden;
+    max-width: 480px;
 
     div {
         width: 50%;
@@ -410,6 +308,7 @@
 
 .event--org {
     margin-bottom: var(--fourE);
+   
 
     figure {
         border-radius: 5px;
@@ -446,8 +345,8 @@
 .events--cards {
     ul {
         display: grid;
-        grid-template-columns: repeat(1, 230px);
-        grid-auto-rows: 250px;
+        grid-template-columns: repeat(1, 330px);
+   
         gap: 1rem;
     }
 
@@ -523,6 +422,17 @@
 
 }
 
+small{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    text-align: left;
+    color: rgb(250, 106, 106);
+    font-family: var(--font-red);
+    font-weight: 700;
+    margin-top: 12px;
+    width: 100%;
+    padding-left: 12px;
+}
 @import './Supports';
 
 

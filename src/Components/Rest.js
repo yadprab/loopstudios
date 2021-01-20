@@ -6,7 +6,7 @@ const Rest=()=> {
         <figure>
           <picture>
             <source
-              media="(min-width:1100px )"
+              media="(min-width:901px )"
               srcSet="/images/desktop/image-curiosity.jpg"
             />
             <img src="/images/mobile/image-curiosity.jpg" alt="The curiosity" loading='lazy' />
@@ -18,7 +18,7 @@ const Rest=()=> {
         <figure>
           <picture>
             <source
-              media="(min-width:1100px )"
+              media="(min-width:901px )"
               srcSet="/images/desktop/image-fisheye.jpg"
             />
             <img src="/images/mobile/image-fisheye.jpg" alt="fisheye"  loading='lazy'/>
@@ -30,7 +30,7 @@ const Rest=()=> {
         <figure>
           <picture>
             <source
-              media="(min-width:1100px )"
+              media="(min-width:901px )"
               srcSet="/images/desktop/image-from-above.jpg"
             />
             <img src="/images/mobile/image-from-above.jpg" alt="above" loading='lazy' />
@@ -42,7 +42,7 @@ const Rest=()=> {
         <figure>
           <picture>
             <source
-              media="(min-width:1100px )"
+              media="(min-width:901px )"
               srcSet="/images/desktop/image-pocket-borealis.jpg"
             />
             <img

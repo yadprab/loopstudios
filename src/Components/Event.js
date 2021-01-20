@@ -25,10 +25,12 @@ let interval = useRef();
       const distance = countDownDate - now;
 
        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+       
        const hours = Math.floor(
          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
        );
        const min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+       
        const sec = Math.floor((distance % (1000 * 60)) / 1000);   
 
 
@@ -50,7 +52,7 @@ let interval = useRef();
     return () => {
       clearInterval(interval.current)
     }
-  }, )
+  },)
     return (
       <>
         <section className="events--info">

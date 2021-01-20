@@ -34,19 +34,54 @@ const Overlay=({nav, set})=> {
 
             <ul className="mobile--nav">
               <li>
-                <Link to="/">home</Link>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
+                  home
+                </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link
+                  to="/about"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/events">Events</Link>
+                <Link
+                  to="/events"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
+                  Events
+                </Link>
               </li>
               <li>
-                <Link to="/products">Products</Link>
+                <Link
+                  to="/products"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
+                  Products
+                </Link>
               </li>
               <li>
-                <Link to="/supports">supports</Link>
+                <Link
+                  to="/supports"
+                  onClick={() => {
+                    set(!nav);
+                  }}
+                >
+                  supports
+                </Link>
               </li>
             </ul>
           </nav>

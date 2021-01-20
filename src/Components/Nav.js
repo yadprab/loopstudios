@@ -16,9 +16,7 @@ const Nav=()=> {
             <li>
               <Link
                 to="/"
-                onClick={() => {
-                  setNav(!navOpen);
-                }}
+            
               >
                 home
               </Link>
@@ -26,9 +24,7 @@ const Nav=()=> {
             <li>
               <Link
                 to="/about"
-                onClick={() => {
-                  setNav(!navOpen);
-                }}
+             
               >
                 About
               </Link>
@@ -36,9 +32,7 @@ const Nav=()=> {
             <li>
               <Link
                 to="/events"
-                onClick={() => {
-                  setNav(!navOpen);
-                }}
+               
               >
                 Events
               </Link>
@@ -46,9 +40,7 @@ const Nav=()=> {
             <li>
               <Link
                 to="/products"
-                onClick={() => {
-                  setNav(!navOpen);
-                }}
+               
               >
                 Products
               </Link>
@@ -56,9 +48,7 @@ const Nav=()=> {
             <li>
               <Link
                 to="/supports"
-                onClick={() => {
-                  setNav(!navOpen);
-                }}
+                
               >
                 supports
               </Link>

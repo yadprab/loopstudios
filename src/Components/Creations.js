@@ -10,7 +10,7 @@ const Creations=()=> {
             <figure>
               <picture>
                 <source
-                  media="(min-width:1100px )"
+                  media="(min-width:901px )"
                   srcSet="/images/desktop/image-deep-earth.jpg"
                 />
                 <img
@@ -26,7 +26,7 @@ const Creations=()=> {
             <figure>
               <picture>
                 <source
-                  media="(min-width:1100px )"
+                  media="(min-width:901px )"
                   srcSet="/images/desktop/image-night-arcade.jpg"
                 />
                 <img
@@ -42,7 +42,7 @@ const Creations=()=> {
             <figure>
               <picture>
                 <source
-                  media="(min-width:1100px )"
+                  media="(min-width:901px )"
                   srcSet="/images/desktop/image-soccer-team.jpg"
                 />
                 <img
@@ -58,7 +58,7 @@ const Creations=()=> {
             <figure>
               <picture>
                 <source
-                  media="(min-width:1100px )"
+                  media="(min-width:901px )"
                   srcSet="/images/desktop/image-grid.jpg"
                 />
                 <img src="/images/mobile/image-grid.jpg" alt="The grid"  loading='lazy'/>
