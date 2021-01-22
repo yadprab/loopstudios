@@ -363,54 +363,75 @@
             figCaption {
                 position: absolute;
                 bottom: 15px;
-                @include flex-2;
+               
                 width: 100%;
                 text-transform: uppercase;
                 letter-spacing: 3px;
                 font-family: var(--font-red);
-
+                background-color: rgba($color: #000, $alpha: 0.7);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color:var(--White);
+                border-radius: 5px;
+                padding: 12px;
+               overflow: hidden;
 
                 h3 {
-                    font-weight: 500;
-                    font-size: 1rem;
-                    color: hsl(236, 14, 12);
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        border-bottom: 3px solid;
+                        left: 0;
+                        right: 0;
+                        bottom: -4px;
+                        transform-origin: 0%;
+                       transform: scaleX(0);
+                       opacity: 0;
+                       transition:transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease-in
+                    }
+                   
                 }
 
                 p {
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                     font-weight: 500;
-                    color: hsl(236, 14, 12);
-                    text-align: center;
+                    margin-top: 0.5em;
+                    transform: translateX(300px);
+                    opacity: 0;
+                    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in
+
+
+
+                 
+                  
+                    
                 }
             }
-        }
 
-        &:nth-of-type(2) {
-            figure {
-                figcaption {
-
-                    h3 {
-                        color: var(--White);
+            &:hover figCaption{
+                h3{
+                    &::after{
+                        opacity: 1;
+                        transform: scaleX(1);
                     }
-
-                    p {
-                        color: var(--White);
-                    }
+                }
+            }
+            &:hover figCaption {
+                p{
+                    
+                        opacity: 1;
+                        transform: translateX(0);
+                   
                 }
             }
         }
 
-        &:nth-of-type(3) {
-            figure {
-                figcaption {
-                    top: 30px;
-                    bottom: unset;
-                    left: 40px;
-
-
-                }
-            }
-        }
+      
     }
 }
 

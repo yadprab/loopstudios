@@ -63,16 +63,7 @@ const Overlay=({nav, set})=> {
                   Events
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/products"
-                  onClick={() => {
-                    set(!nav);
-                  }}
-                >
-                  Products
-                </Link>
-              </li>
+            
               <li>
                 <Link
                   to="/supports"

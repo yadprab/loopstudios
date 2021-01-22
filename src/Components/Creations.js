@@ -6,7 +6,7 @@ const Creations=()=> {
       <>
         <section className="our--creations">
           <h2>our creations</h2>
-          <section className="creations">
+          <section className={`creations ${seeAll&&'showCap'}`}>
             <figure>
               <picture>
                 <source
@@ -16,7 +16,7 @@ const Creations=()=> {
                 <img
                   src="/images/mobile/image-deep-earth.jpg"
                   alt="deep earth"
-                  loading='lazy'
+                  loading="lazy"
                 />
               </picture>
               <figcaption>
@@ -32,7 +32,7 @@ const Creations=()=> {
                 <img
                   src="/images/mobile/image-night-arcade.jpg"
                   alt="Night arcade"
-                  loading='lazy'
+                  loading="lazy"
                 />
               </picture>
               <figcaption>
@@ -48,7 +48,7 @@ const Creations=()=> {
                 <img
                   src="/images/mobile/image-soccer-team.jpg"
                   alt=" Soccer team VR"
-                  loading='lazy'
+                  loading="lazy"
                 />
               </picture>
               <figcaption>
@@ -61,16 +61,27 @@ const Creations=()=> {
                   media="(min-width:901px )"
                   srcSet="/images/desktop/image-grid.jpg"
                 />
-                <img src="/images/mobile/image-grid.jpg" alt="The grid"  loading='lazy'/>
+                <img
+                  src="/images/mobile/image-grid.jpg"
+                  alt="The grid"
+                  loading="lazy"
+                />
               </picture>
               <figcaption>
                 <h3>The grid</h3>
               </figcaption>
             </figure>
-            {seeAll&&<Rest/>}
+            {seeAll && <Rest />}
           </section>
-          <section className='button--section'>
-              <button id='see--all' onClick={()=>{setAll(!seeAll)}}>{seeAll?'seeless':'seeall'}</button>
+          <section className="button--section">
+            <button
+              id="see--all"
+              onClick={() => {
+                setAll(!seeAll);
+              }}
+            >
+              {seeAll ? "seeless" : "seeall"}
+            </button>
           </section>
         </section>
       </>

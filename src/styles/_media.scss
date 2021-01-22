@@ -2,7 +2,7 @@
 
     .home--header,
     .about--header,
-    .events--header{
+    .events--header {
         max-width: 768px;
     }
 
@@ -24,46 +24,53 @@
 
     .events--header {
         background-image: url(../backgroundimage/desktop/eventsIpad.jpg);
-        .hero--text{
+
+        .hero--text {
             text-align: left;
-            h2{
+
+            h2 {
                 font-size: 3rem;
             }
         }
 
-        p{
+        p {
             text-align: left;
             padding-left: 24px;
             font-size: 2rem;
         }
     }
-    .events--info{
-        h2{
+
+    .events--info {
+        h2 {
             font-size: 2.5rem;
         }
-         #venue{
-             font-size: 1.7rem;
-         }
-         article{
-             p{
-                 font-size: 1.2rem;
-             }
-         }
 
-        .count--down{
+        #venue {
+            font-size: 1.7rem;
+        }
+
+        article {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .count--down {
             grid-template-columns: repeat(4, 100px);
 
-            .count{
-                div{
+            .count {
+                div {
                     height: 50px;
-                     p {
-                         font-size: 2.5rem;
-                         top: 20px;
-                     }
+
+                    p {
+                        font-size: 2.5rem;
+                        top: 20px;
+                    }
                 }
-               .type{
-                   font-size: 1rem;
-               }
+
+                .type {
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -79,11 +86,23 @@
             font-size: 2rem;
         }
     }
+    .banner--section{
+        height: 70vh;
+         background-image: url(../backgroundimage/desktop/banner.jpg);
+    }
 
+   .event--main{
+     .banner--section{
+           background-image: url(../backgroundimage/desktop/banner2.jpg);
+           background-position: center;
+     }
+   }
 
 
     ///main--section
-    .home--main,.about--main,.event--main{
+    .home--main,
+    .about--main,
+    .event--main {
         max-width: 768px;
 
         .intro--section {
@@ -95,20 +114,21 @@
             }
         }
     }
- 
-    .about--section{
-        article{
-            p{
+
+    .about--section {
+        article {
+            p {
                 font-size: 1.2rem;
             }
         }
     }
-  
-    .project--section{
-          @include flex-2;
-        article{
-          
-            p{
+
+    .project--section {
+        @include flex-2;
+
+        article {
+
+            p {
                 max-width: 50ch;
                 text-align: center;
             }
@@ -135,6 +155,11 @@
     }
 
 
+    .events--cards {
+        ul {
+            grid-template-columns: repeat(2, 330px);
+        }
+    }
 
     .overlay {
         max-width: 900px;
@@ -145,45 +170,48 @@
 
 
     ///main--section
-    .home--main,.about--main,.event--main {
+    .home--main,
+    .about--main,
+    .event--main {
         max-width: 900px;
 
     }
- .current--project {
-     grid-template-columns: repeat(5, 1fr);
-     place-content: center;
 
-     figure {
-         grid-row: 1/2;
-         grid-column: 1/ span 3;
-     }
+    .current--project {
+        grid-template-columns: repeat(5, 1fr);
+        place-content: center;
 
-     .project--section {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         grid-row: 1/2;
-         grid-column: 3/-1;
-         background-color: var(--White);
-         align-self: end;
-     }
+        figure {
+            grid-row: 1/2;
+            grid-column: 1/ span 3;
+        }
 
-     article {
-         text-align: left;
+        .project--section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-row: 1/2;
+            grid-column: 3/-1;
+            background-color: var(--White);
+            align-self: end;
+        }
 
-         p {
-             max-width: 50ch;
-             text-align: left;
-         }
+        article {
+            text-align: left;
 
-     }
- }
+            p {
+                max-width: 50ch;
+                text-align: left;
+            }
 
-   .cards--section {
-       ul {
-           grid-template-columns: repeat(2, 300px);
-       }
-   }
+        }
+    }
+
+    .cards--section {
+        ul {
+            grid-template-columns: repeat(2, 300px);
+        }
+    }
 
 
 
@@ -238,6 +266,9 @@
 
         place-content: center;
         grid-template-columns: repeat(2, 256px);
+
+
+
     }
 
 
@@ -279,7 +310,21 @@
 
 
 
+    .accordion--container {
+        max-width: 900px;
+        grid-template-columns: 300px 1fr;
+        min-height: 500px;
 
+        article {
+            height: 100%;
+            margin-bottom: 0;
+            @include flex-2;
+        }
+
+        .content {
+            margin: 24px;
+        }
+    }
 
 
 
@@ -294,8 +339,7 @@
 
     .home--header,
     .about--header,
-    .events--header
-     {
+    .events--header {
         max-width: 1440px;
         padding: 120px 48px;
         height: 120vh;
@@ -304,10 +348,12 @@
     .icon--section {
         display: none;
     }
-    .about--header{
-        .hero--text{
+
+    .about--header {
+        .hero--text {
             max-width: 500px;
-            h2{
+
+            h2 {
                 text-align: left;
             }
         }
@@ -347,7 +393,9 @@
 
 
     ///main--section
-    .home--main,.about--main,.event--main{
+    .home--main,
+    .about--main,
+    .event--main {
         max-width: 1440px;
 
         .intro--section {
@@ -370,17 +418,26 @@
 
 
     }
-    
-    .cards--section{
-        ul{
+
+    .cards--section {
+        ul {
             grid-template-columns: repeat(3, 300px);
         }
     }
 
 
     .our--creations {
-        place-content: center;
 
+        grid-template-columns: 300px auto auto;
+        grid-template-rows: auto auto;
+
+        h2 {
+            grid-column: 1/2;
+        }
+
+        .button--section {
+            grid-column: 3/4;
+        }
 
 
 
@@ -388,12 +445,13 @@
 
 
     .creations {
-
+        grid-row: 2;
+        grid-column: 1/4;
         place-content: center;
         grid-template-columns: repeat(4, 256px);
     }
 
-  
+
 
 
 
@@ -473,7 +531,7 @@
     .about--main,
     .event--main {
         max-width: 100%;
-       
+
     }
 
     footer {

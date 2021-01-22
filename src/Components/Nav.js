@@ -1,59 +1,58 @@
 import{ React, useState} from 'react'
 import { Link } from "react-router-dom";
 import { Overlay } from "./Overlay";
+import { motion } from "framer-motion";
 const Nav=()=> {
       const [navOpen, setNav] = useState(false);
+        const PageTransition = {
+          in: {
+            opacity: 1,
+            scale: 1,
+          },
+          out: {
+            opacity: 0,
+            scale: 0,
+          },
+        };
     return (
       <>
         {navOpen && <Overlay nav={navOpen} set={setNav} />}
         <nav>
-          <section className="logo--section">
+          <motion.section
+            className="logo--section"
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={PageTransition}
+            transition={{ delay: 0.2 }}
+          >
             <Link to="/">
               <h1>loopstudios</h1>
             </Link>
-          </section>
-          <ul className="desktop--nav">
+          </motion.section>
+          <motion.ul
+            className="desktop--nav"
+         
+            initial="out"
+            animate="in"
+            exit="out"
+            variants={PageTransition}
+            transition={{ delay: 0.2 }}
+          >
             <li>
-              <Link
-                to="/"
-            
-              >
-                home
-              </Link>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <Link
-                to="/about"
-             
-              >
-                About
-              </Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link
-                to="/events"
-               
-              >
-                Events
-              </Link>
+              <Link to="/events">Events</Link>
             </li>
+
             <li>
-              <Link
-                to="/products"
-               
-              >
-                Products
-              </Link>
+              <Link to="/supports">supports</Link>
             </li>
-            <li>
-              <Link
-                to="/supports"
-                
-              >
-                supports
-              </Link>
-            </li>
-          </ul>
+          </motion.ul>
           <section className="icon--section">
             <button
               id="hamburger--icon"

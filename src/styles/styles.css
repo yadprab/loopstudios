@@ -1028,6 +1028,32 @@ nav #hamburger--icon {
   color: var(--White);
 }
 
+.showCap figCaption {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  -webkit-animation: showCap 0.3s ease forwards 0.2s;
+          animation: showCap 0.3s ease forwards 0.2s;
+}
+
+@-webkit-keyframes showCap {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showCap {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .teams--section {
   padding: 0 var(--twentyF);
   margin-bottom: var(--fourE);
@@ -1638,50 +1664,68 @@ nav #hamburger--icon {
 .events--cards li figure figCaption {
   position: absolute;
   bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: var(--font-red);
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: var(--White);
+  border-radius: 5px;
+  padding: 12px;
+  overflow: hidden;
 }
 
 .events--cards li figure figCaption h3 {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #1a1b23;
+  font-weight: 700;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.events--cards li figure figCaption h3::after {
+  content: '';
+  position: absolute;
+  border-bottom: 3px solid;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in, -webkit-transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.4s ease-in, -webkit-transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease-in;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease-in, -webkit-transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .events--cards li figure figCaption p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #1a1b23;
-  text-align: center;
+  margin-top: 0.5em;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in, -webkit-transform 0.4s ease-in-out;
 }
 
-.events--cards li:nth-of-type(2) figure figcaption h3 {
-  color: var(--White);
+.events--cards li figure:hover figCaption h3::after {
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
-.events--cards li:nth-of-type(2) figure figcaption p {
-  color: var(--White);
-}
-
-.events--cards li:nth-of-type(3) figure figcaption {
-  top: 30px;
-  bottom: unset;
-  left: 40px;
+.events--cards li figure:hover figCaption p {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .event--banner {
@@ -1702,9 +1746,6 @@ small {
 
 .supports--container {
   padding: 56px 24px;
-  min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1E1F29), to(#7EE8FA));
-  background: linear-gradient(180deg, #1E1F29 0%, #7EE8FA 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1722,6 +1763,22 @@ small {
 
 .supports--container nav {
   width: 100%;
+}
+
+.supports--container nav h1 {
+  color: var(--Black);
+}
+
+.supports--container nav #hamburger--icon svg path {
+  fill: var(--Black);
+}
+
+.supports--container nav .desktop--nav a {
+  color: var(--Black);
+}
+
+.supports--container .overlay h1 {
+  color: var(--White);
 }
 
 .accordion--container {
@@ -1953,10 +2010,22 @@ footer p {
   .logo--section h1 {
     font-size: 2rem;
   }
-  .home--main, .about--main, .event--main {
+  .banner--section {
+    height: 70vh;
+    background-image: url(../backgroundimage/desktop/banner.jpg);
+  }
+  .event--main .banner--section {
+    background-image: url(../backgroundimage/desktop/banner2.jpg);
+    background-position: center;
+  }
+  .home--main,
+  .about--main,
+  .event--main {
     max-width: 768px;
   }
-  .home--main .intro--section article p, .about--main .intro--section article p, .event--main .intro--section article p {
+  .home--main .intro--section article p,
+  .about--main .intro--section article p,
+  .event--main .intro--section article p {
     max-width: 50ch;
     font-size: 1.2rem;
   }
@@ -1994,10 +2063,16 @@ footer p {
   .products--header {
     max-width: 900px;
   }
+  .events--cards ul {
+    -ms-grid-columns: (330px)[2];
+        grid-template-columns: repeat(2, 330px);
+  }
   .overlay {
     max-width: 900px;
   }
-  .home--main, .about--main, .event--main {
+  .home--main,
+  .about--main,
+  .event--main {
     max-width: 900px;
   }
   .current--project {
@@ -2091,6 +2166,32 @@ footer p {
   .event--main {
     max-width: 1100px;
   }
+  .accordion--container {
+    max-width: 900px;
+    -ms-grid-columns: 300px 1fr;
+        grid-template-columns: 300px 1fr;
+    min-height: 500px;
+  }
+  .accordion--container article {
+    height: 100%;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .accordion--container .content {
+    margin: 24px;
+  }
   footer {
     max-width: 1100px;
   }
@@ -2159,15 +2260,21 @@ footer p {
   .overlay {
     max-width: 1440px;
   }
-  .home--main, .about--main, .event--main {
+  .home--main,
+  .about--main,
+  .event--main {
     max-width: 1440px;
   }
-  .home--main .intro--section, .about--main .intro--section, .event--main .intro--section {
+  .home--main .intro--section,
+  .about--main .intro--section,
+  .event--main .intro--section {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     margin-bottom: 96px;
   }
-  .home--main .intro--section .img--section, .about--main .intro--section .img--section, .event--main .intro--section .img--section {
+  .home--main .intro--section .img--section,
+  .about--main .intro--section .img--section,
+  .event--main .intro--section .img--section {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -2175,7 +2282,9 @@ footer p {
     -ms-grid-column-span: 3;
     grid-column: 1/ span 3;
   }
-  .home--main .intro--section article, .about--main .intro--section article, .event--main .intro--section article {
+  .home--main .intro--section article,
+  .about--main .intro--section article,
+  .event--main .intro--section article {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -2190,9 +2299,27 @@ footer p {
         grid-template-columns: repeat(3, 300px);
   }
   .our--creations {
-    place-content: center;
+    -ms-grid-columns: 300px auto auto;
+        grid-template-columns: 300px auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+  }
+  .our--creations h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .our--creations .button--section {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
   }
   .creations {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
     place-content: center;
     -ms-grid-columns: (256px)[4];
         grid-template-columns: repeat(4, 256px);
