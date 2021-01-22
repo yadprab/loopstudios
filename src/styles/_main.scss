@@ -1,12 +1,11 @@
-
-
 .home--main {
     max-width: 480px;
-    padding:  var(--twentyF);
+    padding: var(--twentyF);
     margin-bottom: var(--seven);
-    .intro--section{
+
+    .intro--section {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 10px;
         place-content: center;
     }
@@ -41,21 +40,23 @@
 @keyframes tr {
     0% {
         opacity: 0.5;
-      
+
     }
 
     100% {
         opacity: 1;
     }
 }
-.ht{
+
+.ht {
     background-color: var(--Black);
     color: var(--White);
 }
+
 .img--section {
     margin-bottom: var(--twentyF);
 
-    img{
+    img {
         width: 100%;
     }
 }
@@ -225,19 +226,21 @@
 }
 
 .current--project {
-    padding: 0 var(--twentyF);
+    padding: 0 12px;
     display: grid;
-    grid-template-columns: repeat(1, minmax((1fr, 480px)));
+    grid-template-columns:repeat(1, 1fr);
     gap: 1rem;
     place-content: center;
-      
+    grid-auto-rows:  300px auto;
 
-    .project--section{
-        padding: 24px;
+
+    .project--section {
+        padding: 24px 12px;
 
     }
-    figure{
-        img{
+
+    figure {
+        img {
             height: 100%;
             object-fit: cover;
         }
@@ -250,13 +253,13 @@
         font-weight: 500;
         text-transform: uppercase;
         font-size: 1.5rem;
-         margin-bottom: 12px;
+        margin-bottom: 12px;
         color: var(--Black);
     }
 
     article {
         margin-bottom: var(--twentyF);
-     
+
         p {
             max-width: 40ch;
             text-align: center;
@@ -308,7 +311,7 @@
 
 .event--org {
     margin-bottom: var(--fourE);
-   
+
 
     figure {
         border-radius: 5px;
@@ -346,7 +349,7 @@
     ul {
         display: grid;
         grid-template-columns: repeat(1, 330px);
-   
+
         gap: 1rem;
     }
 
@@ -363,7 +366,7 @@
             figCaption {
                 position: absolute;
                 bottom: 15px;
-               
+
                 width: 100%;
                 text-transform: uppercase;
                 letter-spacing: 3px;
@@ -373,16 +376,17 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                color:var(--White);
+                color: var(--White);
                 border-radius: 5px;
                 padding: 12px;
-               overflow: hidden;
+                overflow: hidden;
 
                 h3 {
                     font-weight: 700;
                     font-size: 1.4rem;
                     position: relative;
-                    &::after{
+
+                    &::after {
                         content: '';
                         position: absolute;
                         border-bottom: 3px solid;
@@ -390,11 +394,11 @@
                         right: 0;
                         bottom: -4px;
                         transform-origin: 0%;
-                       transform: scaleX(0);
-                       opacity: 0;
-                       transition:transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease-in
+                        transform: scaleX(0);
+                        opacity: 0;
+                        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease-in
                     }
-                   
+
                 }
 
                 p {
@@ -404,34 +408,29 @@
                     transform: translateX(300px);
                     opacity: 0;
                     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in
-
-
-
-                 
-                  
-                    
                 }
             }
 
-            &:hover figCaption{
-                h3{
-                    &::after{
+            &:hover figCaption {
+                h3 {
+                    &::after {
                         opacity: 1;
                         transform: scaleX(1);
                     }
                 }
             }
+
             &:hover figCaption {
-                p{
-                    
-                        opacity: 1;
-                        transform: translateX(0);
-                   
+                p {
+
+                    opacity: 1;
+                    transform: translateX(0);
+
                 }
             }
         }
 
-      
+
     }
 }
 
@@ -443,7 +442,7 @@
 
 }
 
-small{
+small {
     font-size: 1.2rem;
     text-transform: capitalize;
     text-align: left;
@@ -454,8 +453,5 @@ small{
     width: 100%;
     padding-left: 12px;
 }
+
 @import './Supports';
-
-
-
-

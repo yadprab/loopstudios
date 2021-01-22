@@ -94,7 +94,7 @@
    .event--main{
      .banner--section{
            background-image: url(../backgroundimage/desktop/banner2.jpg);
-           background-position: center;
+           background-position: top;
      }
    }
 
@@ -180,6 +180,7 @@
     .current--project {
         grid-template-columns: repeat(5, 1fr);
         place-content: center;
+        grid-auto-rows: auto;
 
         figure {
             grid-row: 1/2;

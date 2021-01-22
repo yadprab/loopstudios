@@ -1508,17 +1508,18 @@ nav #hamburger--icon {
 }
 
 .current--project {
-  padding: 0 var(--twentyF);
+  padding: 0 12px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(1fr, 480px))[1];
-      grid-template-columns: repeat(1, minmax(1fr, 480px));
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   place-content: center;
+  grid-auto-rows: 300px auto;
 }
 
 .current--project .project--section {
-  padding: 24px;
+  padding: 24px 12px;
 }
 
 .current--project figure img {
@@ -2021,7 +2022,7 @@ footer p {
   }
   .event--main .banner--section {
     background-image: url(../backgroundimage/desktop/banner2.jpg);
-    background-position: center;
+    background-position: top;
   }
   .home--main,
   .about--main,
@@ -2084,6 +2085,7 @@ footer p {
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
     place-content: center;
+    grid-auto-rows: auto;
   }
   .current--project figure {
     -ms-grid-row: 1;
