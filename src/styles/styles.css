@@ -931,6 +931,7 @@ nav #hamburger--icon {
   text-align: center;
   max-width: 40ch;
   line-height: 1.5;
+  font-size: 0.82rem;
 }
 
 .our--creations {
@@ -1549,6 +1550,7 @@ nav #hamburger--icon {
   line-height: 1.5;
   color: var(--DarkGray);
   font-family: var(--font-alata);
+  font-size: 0.82rem;
 }
 
 .progress--bar {
