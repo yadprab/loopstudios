@@ -9,7 +9,7 @@ function App() {
   let location = useLocation();
   return (
     <>
-      <section className="main--container">
+      <div className="main--container">
        
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.pathname}>
@@ -20,7 +20,7 @@ function App() {
             </Switch>
           </AnimatePresence>
        
-      </section>
+      </div>
     </>
   );
 }
